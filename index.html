@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balance Sheet</title>
+    <title>Gains Tracker</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/35eeb04fc4.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <main>
@@ -12,17 +13,20 @@
         <h1>
           <span class="flex">
             <span>Gaines by Dee</span>
-            <span>Records Sheet</span>
+            <span>Gym Progress Tracker</span>
           </span>
         </h1>
         <div id="years" aria-hidden="true">
-          <span class="year">2019</span>
+          <!-- <span class="year">2019</span>
           <span class="year">2020</span>
-          <span class="year">2021</span>
+          <span class="year">2021</span> -->
+          <span class="year" id="year-2019">2019</span>
+          <span class="year" id="year-2020">2020</span>
+          <span class="year" id="year-2021">2021</span>
         </div>
         <div class="table-wrap">
           <table>
-            <caption>Assets</caption>
+            <caption>Gains</caption>
             <thead>
               <tr>
                 <td></td>
@@ -33,89 +37,102 @@
             </thead>
             <tbody>
               <tr class="data">
-                <th>Muscle Mass <span class="description">Gaines measured in Protein shakes.</span></th>
+                <th>Muscle Mass <span class="description">Total muscle gained in lbs (measured through weight or body composition).</span></th>
                 <td>+15 lbs</td>
                 <td>+20 lbs</td>
                 <td class="current">+25 lbs</td>
               </tr>
               <tr class="data">
-                <th>Checking <span class="description">Our primary transactional account.</span></th>
-                <td>$54</td>
-                <td>$56</td>
-                <td class="current">$53</td>
+                <th>Max Bench Press <span class="description">Max weight lifted in the bench press.</span></th>
+                <td>150 lbs</td>
+                <td>180 lbs</td>
+                <td class="current">205 lbs</td>
               </tr>
               <tr class="data">
-                <th>Savings <span class="description">Funds set aside for emergencies.</span></th>
-                <td>$500</td>
-                <td>$650</td>
-                <td class="current">$728</td>
+                <th>Body Fat Percentage <span class="description">Body fat measured in percentage.</span></th>
+                <td>18%</td>
+                <td>15%</td>
+                <td class="current">12%</td>
               </tr>
               <tr class="total">
-                <th>Total <span class="sr-only">Assets</span></th>
-                <td>$579</td>
-                <td>$736</td>
-                <td class="current">$809</td>
+                <th>Total Progress <span class="sr-only">Gains</span></th>
+                <td>+10%</td>
+                <td>+15%</td>
+                <td class="current">+20%</td>
               </tr>
             </tbody>
           </table>
           <table>
-            <caption>Liabilities</caption>
+            <caption>Challenges</caption>
             <thead>
               <tr>
-              <td></td>
-              <th><span class="sr-only">2019</span></th>
-              <th><span class="sr-only">2020</span></th>
-              <th><span class="sr-only">2021</span></th>
+                <td></td>
+                <th><span class="sr-only">2019</span></th>
+                <th><span class="sr-only">2020</span></th>
+                <th><span class="sr-only">2021</span></th>
               </tr>
             </thead>
             <tbody>
               <tr class="data">
-                <th>Loans <span class="description">The outstanding balance on our startup loan.</span></th>
-                <td>$500</td>
-                <td>$250</td>
-                <td class="current">$0</td>
+                <th>Injuries <span class="description">Injuries that have hindered progress.</span></th>
+                <td>None</td>
+                <td>shoulder strain</td>
+                <td class="current">Knee injury</td>
               </tr>
               <tr class="data">
-                <th>Expenses <span class="description">Annual anticipated expenses, such as payroll.</span></th>
-                <td>$200</td>
-                <td>$300</td>
-                <td class="current">$400</td>
+                <th>Missed Workouts <span class="description">Number of missed workouts due to fatigue or schedule.</span></th>
+                <td>5</td>
+                <td>3</td>
+                <td class="current">8</td>
               </tr>
               <tr class="data">
-                <th>Credit <span class="description">The outstanding balance on our credit card.</span></th>
-                <td>$50</td>
-                <td>$50</td>
-                <td class="current">$75</td>
+                <th>Diet Struggles <span class="description">Challenges in maintaining a clean diet.</span></th>
+                <td>Occasional</td>
+                <td>Frequent</td>
+                <td class="current">Moderate</td>
               </tr>
               <tr class="total">
-                <th>Total <span class="sr-only">Liabilities</span></th>
-                <td>$750</td>
-                <td>$600</td>
-                <td class="current">$475</td>
+                <th>Total Challenges <span class="sr-only">Challenges</span></th>
+                <td>5</td>
+                <td>4</td>
+                <td class="current">7</td>
               </tr>
             </tbody>
           </table>
           <table>
-            <caption>Net Worth</caption>
+            <caption>Total Progress</caption>
             <thead>
               <tr>
-              <td></td>
-              <th><span class="sr-only">2019</span></th>
-              <th><span class="sr-only">2020</span></th>
-              <th><span class="sr-only">2021</span></th>
+                <td></td>
+                <th><span class="sr-only">2019</span></th>
+                <th><span class="sr-only">2020</span></th>
+                <th><span class="sr-only">2021</span></th>
               </tr>
             </thead>
             <tbody>
               <tr class="total">
-                <th>Total <span class="sr-only">Net Worth</span></th>
-                <td>$-171</td>
-                <td>$136</td>
-                <td class="current">$334</td>
+                <th>Total Progress <span class="sr-only">Overall Performance</span></th>
+                <td>+5%</td>
+                <td>+10%</td>
+                <td class="current">+13%</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
     </main>
+    <i class="fa-solid fa-dumbbell gym-icon" style="top: 10%; left: 30%;"></i>
+    <i class="fa-solid fa-dumbbell gym-icon" style="top: 50%; left: 60%;"></i>
+    <i class="fa-solid fa-dumbbell gym-icon" style="top: 70%; left: 20%;"></i>
+    <i class="fa-solid fa-dumbbell gym-icon" style="top: 30%; left: 80%;"></i>
+    <i class="fa-solid fa-dumbbell gym-icon" style="top: 80%; left: 40%;"></i>
+    <i class="fa-solid fa-dumbbell gym-icon" style="top: 40%; left: 70%;"></i>
+    <i class="fa-solid fa-dumbbell gym-icon" style="top: 60%; left: 10%;"></i>
+    <i class="fa-solid fa-utensils gym-icon" style="top: 20%; left: 10%;"></i>
+<i class="fa-solid fa-utensils gym-icon" style="top: 60%; left: 40%;"></i>
+<i class="fa-solid fa-utensils gym-icon" style="top: 30%; left: 80%;"></i>
+<i class="fa-solid fa-utensils gym-icon" style="top: 70%; left: 30%;"></i>
+<i class="fa-solid fa-utensils gym-icon" style="top: 50%; left: 70%;"></i>
+<i class="fa-solid fa-utensils gym-icon" style="top: 80%; left: 50%;"></i>
   </body>
 </html>
